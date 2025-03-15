@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const testButton = document.getElementById('testButton');
-    const output = document.getElementById('output');
+    const output = document.getElementById('outputt');
     
     testButton.addEventListener('click', () => {
         const currentTime = new Date().toLocaleTimeString();
