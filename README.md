@@ -1,3 +1,12 @@
+# MCP Server 예제 : 세미나 관리 Agent
+
+## 의존성 설치
+
+```bash
+$ uv venv .venv 
+
+$ uv pip install -r pyproject.toml
+```
 
 ## Docker image
 
