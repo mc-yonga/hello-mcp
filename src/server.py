@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from semina import seminar_attendees
+from seminar import seminar_attendees
 from datetime import datetime
 import json
 
