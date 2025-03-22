@@ -6,10 +6,10 @@ import json
 app = FastMCP("Seminar Management System")
 
 
-@app.resource("seminar://{party}")
-def resource(party: str) -> str:
-    """특정 파티/그룹의 세미나 참석자 목록을 반환합니다."""
-    return seminar_attendees(party)
+# @app.resource("seminar://{party}")
+# def resource(party: str) -> str:
+#     """특정 파티/그룹의 세미나 참석자 목록을 반환합니다."""
+#     return seminar_attendees(party)
 
 
 @app.tool()
