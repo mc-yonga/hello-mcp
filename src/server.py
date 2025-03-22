@@ -6,13 +6,7 @@ import json
 app = FastMCP("Seminar Management System")
 
 
-# @app.resource("seminar://{party}")
-# def resource(party: str) -> str:
-#     """특정 파티/그룹의 세미나 참석자 목록을 반환합니다."""
-#     return seminar_attendees(party)
-
-
-@app.tool()
+@app.resource("seminar://{party_name}")
 def get_seminar_details(party_name: str) -> str:
     """
     특정 세미나/파티의 상세 정보를 가져옵니다.
@@ -55,27 +49,6 @@ def register_attendee(party_name: str, attendee_name: str) -> str:
     return f"성공: {attendee_name}님이 {party_name} 세미나에 등록되었습니다."
 
 
-@app.tool()
-def check_availability(date: str, room: str) -> str:
-    """
-    특정 날짜와 장소의 이용 가능 여부를 확인합니다.
-
-    Args:
-        date: 확인할 날짜 (YYYY-MM-DD 형식)
-        room: 확인할 방 이름
-
-    Returns:
-        이용 가능 여부 메시지
-    """
-    # 실제 구현에서는 예약 시스템에서 확인하는 로직이 있을 것입니다
-    available = True  # 예시: 실제로는 DB 조회 결과
-
-    if available:
-        return f"{date}에 {room}은(는) 예약 가능합니다."
-    else:
-        return f"{date}에 {room}은(는) 이미 예약되어 있습니다."
-
-
 @app.prompt()
 def prompt(message: str) -> str:
     """
@@ -93,7 +66,6 @@ def prompt(message: str) -> str:
 사용 가능한 도구:
 1. get_seminar_details(party_name) - 특정 세미나의 상세 정보를 조회합니다.
 2. register_attendee(party_name, attendee_name) - 새 참석자를 등록합니다.
-3. check_availability(date, room) - 특정 날짜와 장소의 이용 가능 여부를 확인합니다.
 
 - 세미나 참석자 정보는 'seminar://파티이름' 형식의 리소스를 통해 접근할 수 있습니다.
 - 파티이름은 순수하게 알파벳 문자만 포함해야 합니다.
