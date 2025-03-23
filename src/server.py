@@ -7,6 +7,20 @@ app = FastMCP("Seminar Management System")
 
 
 @app.resource("seminar://{party_name}")
+def fetch_resource(party_name: str):
+    """
+    세미나 참석자 정보를 가져옵니다.
+
+    Args:
+        party_name: 세미나/파티 이름
+
+    Returns:
+        세미나 참석자 목록
+    """
+    return seminar_attendees(party_name)
+
+
+@app.tool()
 def get_seminar_details(party_name: str) -> str:
     """
     특정 세미나/파티의 상세 정보를 가져옵니다.
@@ -64,8 +78,8 @@ def prompt(message: str) -> str:
 당신은 세미나 관리 시스템의 AI 어시스턴트입니다. 사용자에게 친절하고 도움이 되는 응답을 제공하세요.
 
 사용 가능한 도구:
-1. get_seminar_details(party_name) - 특정 세미나의 상세 정보를 조회합니다.
-2. register_attendee(party_name, attendee_name) - 새 참석자를 등록합니다.
+- get_seminar_details(party_name) - 특정 세미나의 상세 정보를 조회합니다.
+- register_attendee(party_name, attendee_name) - 새 참석자를 등록합니다.
 
 - 세미나 참석자 정보는 'seminar://파티이름' 형식의 리소스를 통해 접근할 수 있습니다.
 - 파티이름은 순수하게 알파벳 문자만 포함해야 합니다.
