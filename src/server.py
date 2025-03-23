@@ -3,24 +3,10 @@ from seminar import seminar_attendees
 from datetime import datetime
 import json
 
-app = FastMCP("Seminar Management System")
+mcp = FastMCP("Seminar Management System")
 
 
-@app.resource("seminar://{party_name}")
-def fetch_resource(party_name: str):
-    """
-    세미나 참석자 정보를 가져옵니다.
-
-    Args:
-        party_name: 세미나/파티 이름
-
-    Returns:
-        세미나 참석자 목록
-    """
-    return seminar_attendees(party_name)
-
-
-@app.tool()
+@mcp.tool()
 def get_seminar_details(party_name: str) -> str:
     """
     특정 세미나/파티의 상세 정보를 가져옵니다.
@@ -45,7 +31,7 @@ def get_seminar_details(party_name: str) -> str:
     return json.dumps(seminar_info, ensure_ascii=False, indent=2)
 
 
-@app.tool()
+@mcp.tool()
 def register_attendee(party_name: str, attendee_name: str) -> str:
     """
     새로운 참석자를 세미나에 등록합니다.
@@ -63,7 +49,7 @@ def register_attendee(party_name: str, attendee_name: str) -> str:
     return f"성공: {attendee_name}님이 {party_name} 세미나에 등록되었습니다."
 
 
-@app.prompt()
+@mcp.prompt()
 def prompt(message: str) -> str:
     """
     사용자 메시지를 처리하기 위한 프롬프트를 생성합니다.
@@ -92,4 +78,4 @@ def prompt(message: str) -> str:
 
 
 if __name__ == "__main__":
-    app.run()
+    mcp.run()

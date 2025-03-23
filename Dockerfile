@@ -22,4 +22,4 @@ EXPOSE 3000
 EXPOSE 5173
 
 # MCP 서버 실행
-ENTRYPOINT ["uv", "run", "mcp", "run", "src/server.py:app"]
+ENTRYPOINT ["uv", "run", "mcp", "run", "src/server.py:mcp"]
