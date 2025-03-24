@@ -1,9 +1,8 @@
-FROM nikolaik/python-nodejs:python3.11-nodejs18 as base
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Python / Node / npm 버전 확인
-RUN python --version && node --version && npm --version
+RUN apt-get update && apt-get install -y curl
 
 # 전체 프로젝트 복사
 COPY . .
