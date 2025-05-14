@@ -124,3 +124,160 @@ railway.json 파일을 수정했습니다. 이제 Railway가 `src/server.py` 파
 
 ---
 
+_**User**_
+
+Starting Container
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/app/src/server.py", line 2, in <module>
+
+    from seminar import seminar_attendees
+
+ModuleNotFoundError: No module named 'seminar'
+
+
+배포느 ㄴ했는데 deploy log 보면 이런 오류가 발생해
+
+---
+
+_**Assistant**_
+
+<no message>
+
+---
+
+```diff
+  from mcp.server.fastmcp import FastMCP
+- from seminar import seminar_attendees
++ from src.seminar import seminar_attendees
+  from datetime import datetime
+  import json
+```
+
+---
+
+<no message>
+
+---
+
+Read file: pyproject.toml
+
+---
+
+
+
+---
+

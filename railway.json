@@ -4,6 +4,6 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "python -m src.server"
+    "startCommand": "python -m server"
   }
 }
